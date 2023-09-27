@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Task 4</title>
+    <script>
+        function showDate() {
+            const now = new Date();
+            const dateElement = document.getElementById("outputDate");
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString(undefined, options);
+            dateElement.textContent = "Date: " + formattedDate;
+        }
+
+        function showTime() {
+            const now = new Date();
+            const timeElement = document.getElementById("outputTime");
+            const formattedTime = now.toLocaleTimeString();
+            timeElement.textContent = "Time: " + formattedTime;
+        }
+    </script>
+</head>
+<body>
+    <h1>Date and Time Example</h1>
+    <button onclick="showDate()">Show Date</button>
+    <p id="outputDate"></p>
+    <button onclick="showTime()">Show Time</button>
+    <p id="outputTime"></p>
+</body>
+</html>

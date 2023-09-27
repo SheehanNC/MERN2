@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Task 2 </title>
+    <script>
+        function sort(input) {
+            return input.split('').sort().join('');
+        }
+        function display() {
+            const input = document.getElementById('str').value;
+            const newStr = sort(input);
+            document.getElementById('output').innerHTML = 'Sorted String: ' + newStr;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sort String Alphabetically</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="str">
+    <button onclick="display()">Sort</button>
+    <p id="output"></p>
+</body>
+</html>

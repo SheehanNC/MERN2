@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title>JavaScript 3</title>
+    <script>
+        function Calculate(calculation){
+            var x = parseFloat(document.getElementById("num1").value);
+            var y = parseFloat(document.getElementById("num2").value);
+            var result;
+            if(calculation==="mul"){
+                
+                result = x*y;
+            }
+            if(calculation==="div"){
+                result =  x/y; 
+            }
+            document.getElementById("output").innerHTML = "The Result is: " + result;
+        }
+    </script>
+    <body>
+        <h1>Multiply/Divide</h1>
+        <label>1st Number: </label>
+        <input type="text" id="num1"><br><br>
+        <label>2nd Number: </label>
+        <input type="text" id="num2"><br><br>
+        <button onclick="Calculate('mul')">Multiply</button>
+        <button onclick="Calculate('div')">Divide</button>
+        <p id ="output"></p>
+    </body>
+</html>
